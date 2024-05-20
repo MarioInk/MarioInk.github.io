@@ -141,6 +141,7 @@ nav ul li a:hover::after{
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
+    border-color: var(--main-color);
 }
 .about-col-2{
     flex-basis: 60%;
@@ -148,7 +149,7 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600 ;
-    color: rgba(209, 219, 208, 0.973);
+    color: var(--main-color);
 }
 .about-text{
     font-size: 25px;
