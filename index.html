@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarioInk Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/06dae08c12.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="cursor"></div>
+<div class="cursor-trail"></div>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/khell 6.png" class="logo" alt="MarioInk Logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#skill">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#getintouch">Get in touch</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<div class="Home">
+    <div class="header-text">
+        <p>UI/UX Designer</p>
+        <h1>Hi, I'am <span>Mario</span></h1>
+    </div>
+    <div class="HomeImage">
+        <img src="Images/Profile 3.png" alt="Profile Image">
+    </div>
+</div>
+<!--   -----------about--------------     -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/Profile 2 1.png" >
+            </div>
+            <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <br>
+                    <p class="about-text">👋 Hi! I am Mario, a professional with a passion for innovation and creativity. 
+                    With a Bachelor's degree in Economics and a Professional Master in Digital Marketing, 
+                    I have consolidated a solid knowledge base in the world of business and digital marketing.</p>
+                    <br>
+                    <p class="about-text">🌟 However, it was the world of design that really captured my attention. 
+                    I am currently pursuing studies in UX/UI Design, immersing myself in creating engaging and intuitive experiences for users. 
+                    I am particularly fascinated by Brand Design and creating illustrations that effectively communicate a brand's story and values.</p>
+                    <br>
+                    <p class="about-text">🌍 In addition to my passion for design, I am a true "tech-lover," always on the lookout for the latest in the world of technology. 
+                    I also love animals and I am passionate about art, manga, comic books and video games, finding inspiration and enjoyment in these art forms.</p>
+                    <br>
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('skills', event)">Skills</div>
+                        <div class="tab-links" onclick="opentab('experience', event)">Experience</div>
+                        <div class="tab-links" onclick="opentab('education', event)">Education</div>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br> <br> Designing Web/App Interfaces</li>
+                            <li><span>Brand Design</span><br> <br> Designing a full Brand Identity</li>
+                            <li><span>Graphic Design</span><br> <br> Designing various materials</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023</span><br> <br> Features Writer</li>
+                            <li><span>2022 - 2023</span><br> <br> Web designer & SEO - CF</li>
+                            <li><span>2022 - 2023</span><br> <br> Marketing Intern - WILLIT</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br> <br> Master of UX/UI Design</li>
+                            <li><span>2023</span><br> <br> Master of Digital Marketing</li>
+                            <li><span>2019 - 2022</span><br> <br> Bachelor of Business Administration</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----services-->
+<div id="skill">
+    <div class="container">
+        <h1 class="sub-title">My skill</h1>
+        <div class="skill-list">
+            <div>
+                <i class="fa-solid fa-pen-ruler"></i>
+                <h2>Brand Design</h2>
+                <p>Brand Identity and guidelines to elevate your brand perception</p>
+                <a href="#getintouch">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-object-group"></i>
+                <h2>UX/UI Design</h2>
+                <p>Analysis and creation of new design for your website or app</p>
+                <a href="#getintouch">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-layer-group"></i>
+                <h2>Graphic Design</h2>
+                <p>Creation of various design materials for your ideas</p>
+                <a href="#getintouch">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>HTML/CSS</h2>
+                <p>Understanding of languages to interface with developers</p>
+                <a href="#getintouch">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!---Projects-->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My projects</h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="Images/Slide 16_9 - 46.jpg">
+                <div class="layer">
+                    <h3>Tavel agency Brand Identity</h3>
+                    <p>The concrete idea of ORIZON lies in being able to offer various customizable travel packages 
+                        to a diverse target audience.</p>
+                        <a href="https://www.behance.net/mp365"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Images/Slide 16_9 - 134.jpg">
+                <div class="layer">
+                    <h3>UX/UI Carpooling Project</h3>
+                    <p> From benchmark, usability and accesibility analysis to the final prototype for a brand website.
+                    </p>
+                        <a href="https://www.behance.net/mp365"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Images/bus_branding.png">
+                <div class="layer">
+                    <h3>Biopharma Brand Identity</h3>
+                    <p>Narium is a bio-tech firm developing ways to enhace the usage of carbon-neutral algae.
+                    </p>
+                        <a href="https://www.behance.net/mp365"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="Images/e1f10e194570509.66042c45ef768.jpg">
+                <div class="layer">
+                    <h3>Beauty Center Brand Identity</h3>
+                    <p>
+
+                    </p>
+                        <a href="https://www.behance.net/mp365"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://www.behance.net/mp365" class="btn">See more</a>
+    </div>
+</div>
+<!---Get in touch-->
+<div id="getintouch" class="getintouch">
+    <div class="containerGetintouch">
+        <div class="row">
+            <div class="getintouch-left">
+                <h1 class="sub-title">Get in touch with me</h1>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/mariopassa/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.behance.net/mp365"><i class="fa-brands fa-square-behance"></i></a>
+                    <a href="https://dribbble.com/Khellpassa"><i class="fa-brands fa-square-dribbble"></i></a>
+                </div>
+                <a href="Images/Resume Mario Passalcqua 2024.pdf" download class="btn btn2">My Resume</a>
+            </div>
+        </div>
+    </div>
+    <div class="containerForm">
+      <div class="getintouch-right">
+           <form>
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="Request" rows="6" placeholder="Your Request"></textarea>
+            <button type="submit" class="btn btn2">Send message</button>
+           </form>
+      </div>
+    </div>
+</div>
+<div class="copyright">
+    <P>Copyright MarioInk</P>
+</div>
+<script src="script.js"></script>
+
+
+<script>
+
+ document.addEventListener("DOMContentLoaded", function() {
+    const tablinks = document.querySelectorAll(".tab-links");
+    const tabcontents = document.querySelectorAll(".tab-contents");
+
+    function opentab(tabname, event) {
+        for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    window.opentab = opentab; // Assicurati che la funzione sia accessibile globalmente
+ });
+
+</script>
+
+<script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+         sidemenu.style.right = "0";
+        }
+
+      function closemenu() {
+         sidemenu.style.right = "-200px";
+       }
+</script>
+
+<script>
+    function submitForm(event) {
+        event.preventDefault();
+        // Your form submission logic here
+    }
+</script>
+
+<script>
+    // Funzione per aggiornare la posizione del cursore
+    function updateCursorPosition(event) {
+            const cursor = document.querySelector('.cursor');
+            const cursorTrail = document.querySelector('.cursor-trail');
+            cursor.style.left = `${event.clientX}px`;
+            cursor.style.top = `${event.clientY}px`;
+            // Posiziona la scia del cursore leggermente indietro rispetto al cursore principale
+            cursorTrail.style.left = `${event.clientX - 5}px`;
+            cursorTrail.style.top = `${event.clientY - 5}px`;
+        }
+
+        // Aggiungi un ascoltatore di eventi per aggiornare la posizione del cursore
+        document.addEventListener('mousemove', updateCursorPosition);
+</script>
+
+</body>
+</html>
