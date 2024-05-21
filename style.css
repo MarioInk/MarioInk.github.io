@@ -9,10 +9,10 @@ html{
     scroll-behavior: smooth;
 }
 :root {
-    --main-color: #a8ee4da2;
-    --bg-color: #3C3C3B;
-    --text-color: white;
-    --accent-color: rgba(255, 255, 255, 0.932);
+    --main-color: #A8EE4D;
+    --bg-color: #2D2D2D;
+    --text-color: #E9E3E6;
+    --accent-color: #E9E3E6;
 }
 .cursor {
     position: fixed;
@@ -30,7 +30,7 @@ html{
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 2px solid #a8ee4da2; /* Colore dello stroke */
+    border: 2px solid #A8EE4D; /* Colore dello stroke */
     box-sizing: border-box;
 }
 .cursor:hover::after {
@@ -88,7 +88,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #a8ee4da2;
+    background: #A8EE4D;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -109,7 +109,7 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 .header-text h1 span{
-    color:#a8ee4da2;
+    color:#A8EE4D;
 }
 /* ------------Home------------ */
 .Home{
@@ -138,10 +138,14 @@ nav ul li a:hover::after{
 .about-col-1{
     flex-basis: 35%;
 }
-.about-col-1 img{
+.about-col-1 img {
     width: 100%;
-    border-radius: 5px;
-    border-color: var(--main-color);
+    border-radius: 30px;
+    border: 0px solid var(--main-color);
+    transition: transform 0.5s ease;
+}
+.about-col-1 img:hover {
+    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg);
 }
 .about-col-2{
     flex-basis: 60%;
@@ -149,10 +153,12 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600 ;
+    margin-bottom: 20px;
     color: var(--main-color);
 }
 .about-text{
     font-size: 25px;
+    line-height: 1.6;
 }
 .tab-titles{
     display: flex;
@@ -169,7 +175,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #a8ee4da2;
+    background: #A8EE4D;
     position: absolute;
     left: 0;
     bottom:-8px;
@@ -183,7 +189,7 @@ nav ul li a:hover::after{
     margin: 10px 0;
 }
 .tab-contents ul li span{
-    color: #a8ee4da2;
+    color: #A8EE4D;
     font-size: 14px;
 }
 .tab-contents{
@@ -214,6 +220,7 @@ nav ul li a:hover::after{
     color:rgba(248, 248, 248, 0.973);
     font-size: 50px;
     margin-bottom: 30px;
+    transition: color 0.5s;
 }
 .skill-list div h2{
     font-size: 35px;
@@ -229,10 +236,16 @@ nav ul li a:hover::after{
     font-size: 16px;
     margin-top: 20px;
     display: inline-block;
+    transition: color 0.5s;
 }
 .skill-list div:hover{
-    background: #a8ee4da2;
+    background: #A8EE4D;
+    color: var(--bg-color);
     transform: translateY(-10px);
+}
+.skill-list div:hover i,
+.skill-list div:hover a {
+    color: var(--bg-color); 
 }
 /*--------projects-----------*/
 #projects{
@@ -251,6 +264,7 @@ nav ul li a:hover::after{
     display: flex; /* Utilizza il display flessibile */
     justify-content: center; /* Centro l'immagine orizzontalmente */
     align-items: center; /* Centro l'immagine verticalmente */
+    transition: transform 0.5s ease-in-out;
 }
 .project img{
     max-width: 300%; /* Imposta la larghezza massima dell'immagine al 100% del suo contenitore */
@@ -259,14 +273,20 @@ nav ul li a:hover::after{
     display: block;
     transition: transform 0.5s;
 }
-.layer{
+.project:hover {
+    transform: scale(1.1);
+}
+/* Layer styles */
+.layer {
     width: 100%;
-    height: 0;
-    background: linear-gradient( #3C3C3B, #a8ee4da2);
+    height: 100%;
+    background: linear-gradient( #a8ee4dc4, #a8ee4dc4);
     border-radius: 10px;
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
+    transform: scaleY(0);
+    transform-origin: center center;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -275,46 +295,84 @@ nav ul li a:hover::after{
     padding: 0 40px;
     text-align: center;
     font-size: 14px;
-    transition: height 0.5s;
+    transition: transform 0.5s;
 }
-.layer h3{
+
+.layer h3 {
     font-weight: 500;
+    font-size: 30px;
     margin-bottom: 20px;
+    color: #2D2D2D;
 }
-.layer a{
+
+.layer p {
+    color: #2D2D2D;
+    font-size: 15px;
+}
+
+.layer a {
     margin-top: 20px;
     padding-top: 20px;
-    color:  var(--bg-color);
+    color: var(--bg-color);
     text-decoration: none;
     font-size: 18px;
     line-height: 16px;
     background: whitesmoke;
     width: 60px;
-    height: 60px ;
+    height: 60px;
     border-radius: 50%;
     text-align: center;
 }
-.project:hover img{
+
+.project:hover img {
     transform: scale(1.1);
 }
-.project:hover .layer{
-    height: 100%;
+
+.project:hover .layer {
+    transform: scaleY(1);
 }
-.btn{
-    display: block;
+.project:hover img {
+    transform: scale(1.1);
+}
+.project:hover .layer {
+    transform: scaleY(1);
+}
+.btn, .btn2 {
+    display: inline-block;
     margin: 50px 0;
     width: fit-content;
-    border: 1px solid  var(--main-color);
+    border: 1px solid var(--main-color);
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: whitesmoke;
+    font-weight: bold;
+    color: var(--bg-color);
     cursor: pointer;
-    transition: background 0.5s;
-}
-.btn:hover {
+    transition: background 0.5s, box-shadow 0.2s ease-in-out;
+    position: relative;
+    background-color: var(--main-color); /* colore di sfondo originale */
+  }
+.btn:hover, .btn2:hover {
     background: var(--main-color);
-}
+    color: var(--bg-color);
+    box-shadow: #a8ee4da2 0px 0px 10px 0px,
+    #a8ee4d 0px 0px 20px 0px; /* ombreggiatura */
+  }
+.btn:before, .btn2:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right, #a8ee4d, #a8ee4dc2, #a8ee4da2);
+    inset: -2px;
+    z-index: -1;
+    border-radius: 12.5px;
+    transition: all 0.2s ease;
+  }
+  
+.btn:hover:before, .btn2:hover:before {
+    box-shadow: #a8ee4da2 0px 0px 10px 0px,
+    #a8ee4d 0px 0px 20px 0px;
+  }
+  
 /*--------getintouch-----------*/
 #getintouch{
     padding: 40px 0;
