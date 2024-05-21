@@ -485,7 +485,6 @@ nav .fas{
     nav .fas{
         display: block;
         font-size: 25px;
-
     }
     nav ul{
         background: var(--main-color);
@@ -507,6 +506,10 @@ nav .fas{
         top: 25px;
         left: 25px;
         cursor: pointer;
+        color: var(--bg-color);
+    }
+    nav ul li a{
+        color: var(--bg-color);
     }
     .sub-title{
         font-size: 40px;
@@ -516,6 +519,9 @@ nav .fas{
     }
     .about-col-1{
         margin-bottom: 30px;
+    }
+    .about-col-1 img{
+        height: auto;
     }
     .about-col-2{
         font-size: 14px;
@@ -531,6 +537,9 @@ nav .fas{
         flex-direction: column;
         margin: 20px;
         gap: 20px;
+    }
+    .header-text{
+        z-index: -100;
     }
     .containerForm, .containerGetintouch {
         width: 100%;
