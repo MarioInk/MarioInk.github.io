@@ -14,6 +14,9 @@ html{
     --text-color: #E9E3E6;
     --accent-color: #E9E3E6;
 }
+* {
+    outline: 1px solid red;
+}
 .cursor {
     position: fixed;
     width: 30px;
@@ -52,6 +55,7 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     cursor: none;
+    overflow-x: hidden;
 }
 #header{
     width: 100%;
@@ -476,11 +480,8 @@ nav .fas{
         margin-top: -180px;
     }
     .HomeImage {
-        width: 400px;
+        width: 320px;
         overflow: hidden;
-
-        >img{width: 300px;
-        height: 300px;}
     }
     .header-text{
         margin-top: 100%;
