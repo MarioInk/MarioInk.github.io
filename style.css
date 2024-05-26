@@ -390,6 +390,21 @@ nav ul li a:hover::after{
     gap: 390px;
     margin: 0 190px;
 }
+
+input[type="text"], input[type="text"], input[type="email"], input[type="Request"], textarea {
+            color: var(--bg-color);
+}
+input[type="text"], input[type="text"], input[type="email"], input[type="Request"], textarea {
+    border: 1px solid var(--main-color);
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            outline: none;
+}
+::placeholder {
+    color: var(--bg-color);
+    opacity: 0.5; /* Opacità ridotta per differenziare dal testo normale */
+}
 .containerGetintouch , .containerForm{
     width: 490px;
 
