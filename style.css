@@ -483,7 +483,7 @@ nav .fas{
         width: 320px;
         overflow: hidden;
 
-        >img{max-width: 320px;
+        >img{width: 320px;
         height: 300px;}
     }
     .header-text{
