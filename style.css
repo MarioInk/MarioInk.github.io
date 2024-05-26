@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Averia Sans Libre", sans-serif;
+    font-family: "Averia Sans Libre", sans-serif, cursive;
     font-style: normal;
     box-sizing: border-box;
 }
@@ -13,9 +13,6 @@ html{
     --bg-color: #2D2D2D;
     --text-color: #E9E3E6;
     --accent-color: #E9E3E6;
-}
-* {
-    outline: 1px solid red;
 }
 .cursor {
     position: fixed;
@@ -469,7 +466,7 @@ nav .fas{
     display: none;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     .cursor{
         display: none;
     }
