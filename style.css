@@ -482,6 +482,9 @@ nav .fas{
     .HomeImage {
         width: 320px;
         overflow: hidden;
+
+        >img{max-width: 320px;
+        height: 300px;}
     }
     .header-text{
         margin-top: 100%;
