@@ -11,11 +11,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Major+Mono+Display&family=Poiret+One&family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/06dae08c12.js" crossorigin="anonymous"></script>
+    <title>MarioInk Portfolio</title>
+<meta name="title" content="MarioInk Portfolio" />
+<meta name="description" content="👋 Hi! I am Mario, a professional with a passion for innovation and creativity. " />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://marioink.github.io/" />
+<meta property="og:title" content="MarioInk Portfolio" />
+<meta property="og:description" content="👋 Hi! I am Mario, a professional with a passion for innovation and creativity. " />
+<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://marioink.github.io/" />
+<meta property="twitter:title" content="MarioInk Portfolio" />
+<meta property="twitter:description" content="👋 Hi! I am Mario, a professional with a passion for innovation and creativity. " />
+<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
 </head>
 <body>
 <div class="cursor"></div>
 <div class="cursor-trail"></div>
-<div id="header">
+<section id="header">
     <div class="container">
         <nav>
             <img src="Images/khell 1.png" class="logo" alt="MarioInk Logo">
@@ -30,8 +48,8 @@
             <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
     </div>
-</div>
-<div class="Home">
+</section>
+<section class="Home">
     <div class="header-text">
         <p>UI/UX Designer</p>
         <h1>Hi, I'am <span >Mario</span></h1>
@@ -39,13 +57,13 @@
     <div class="HomeImage">
         <img src="Images/Profile 3.png" alt="Profile Image">
     </div>
-</div>
-<!--   -----------about--------------     -->
-<div id="about">
+</section>
+<!--   about -->
+<section id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="Images/Profile 2.jpg">
+                <img src="Images/Profile 2.jpg" alt="MarioInk Profile picture">
             </div>
             <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
@@ -90,9 +108,9 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 <!----services-->
-<div id="skill">
+<section id="skill">
     <div class="container">
         <h1 class="sub-title">My skill</h1>
         <div class="skill-list">
@@ -122,14 +140,14 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 <!---Projects-->
-<div id="projects">
+<section id="projects">
     <div class="container">
         <h1 class="sub-title">My projects</h1>
         <div class="project-list">
             <div class="project">
-                <img src="Images/Slide 16_9 - 46.jpg">
+                <img src="Images/Slide 16_9 - 46.jpg" alt="Tavel agency Brand Identity">
                 <div class="layer">
                     <h3>Tavel agency Brand Identity</h3>
                     <p>The concrete idea of ORIZON lies in being able to offer various customizable travel packages 
@@ -138,7 +156,7 @@
                 </div>
             </div>
             <div class="project">
-                <img src="Images/Slide 16_9 - 134.jpg">
+                <img src="Images/Slide 16_9 - 134.jpg" alt="UX/UI Carpooling Project">
                 <div class="layer">
                     <h3>UX/UI Carpooling Project</h3>
                     <p> From benchmark, usability and accesibility analysis to the final prototype for a brand website.
@@ -147,7 +165,7 @@
                 </div>
             </div>
             <div class="project">
-                <img src="Images/bus_branding.png">
+                <img src="Images/bus_branding.png" alt="Biopharma Brand Identity">
                 <div class="layer">
                     <h3>Biopharma Brand Identity</h3>
                     <p>Narium is a bio-tech firm developing ways to enhace the usage of carbon-neutral algae.
@@ -156,7 +174,7 @@
                 </div>
             </div>
             <div class="project">
-                <img src="Images/e1f10e194570509.66042c45ef768.jpg">
+                <img src="Images/e1f10e194570509.66042c45ef768.jpg" alt="Beauty Center Brand Identity">
                 <div class="layer">
                     <h3>Beauty Center Brand Identity</h3>
                     <p>
@@ -168,9 +186,9 @@
         </div>
         <a href="https://www.behance.net/mp365" class="btn">See more</a>
     </div>
-</div>
+</section>
 <!---Get in touch-->
-<div id="getintouch" class="getintouch">
+<section id="getintouch" class="getintouch">
     <div class="containerGetintouch">
         <div class="row">
             <div class="getintouch-left">
@@ -194,10 +212,10 @@
            </form>
       </div>
     </div>
-</div>
-<div class="copyright">
+</section>
+<section class="copyright">
     <P>Copyright MarioInk</P>
-</div>
+</section>
 <script src="script.js"></script>
 
 
@@ -218,7 +236,7 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 
-    window.opentab = opentab; // Funzione sia accessibile globalmente
+    window.opentab = opentab; // Funzione accessibile globalmente
  });
 
 </script>
@@ -233,6 +251,17 @@
       function closemenu() {
          sidemenu.style.right = "-200px";
        }
+
+       function handleDocumentClick(event) {
+    if (window.innerWidth <= 768) { // Verifica se siamo nella media query
+        if (!sidemenu.contains(event.target) && !event.target.closest('.fa-bars')) {
+            closemenu();
+        }
+    }
+}
+
+// Aggiungere l'event listener per chiudere il sidemenu quando si clicca fuori
+document.addEventListener('click', handleDocumentClick);
 </script>
 
 <script>
