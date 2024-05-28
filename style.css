@@ -44,9 +44,9 @@ html{
     border-radius: 50%;
     pointer-events: none;
     z-index: 9998; /* Dietro il cursore principale */
-    opacity: 0; /* Opacità della scia */
-    filter: blur(10px); /* Sfocatura della scia */
-    transition: opacity 0.1s ease; /* Transizione dell'opacità */
+    opacity: 5; /* Opacità della scia */
+    filter: blur(0px); /* Sfocatura della scia */
+    transition: opacity 0.8s ease; /* Transizione dell'opacità */
 }
 body {
     background: var(--bg-color);
@@ -391,15 +391,18 @@ nav ul li a:hover::after{
     margin: 0 190px;
 }
 
-input[type="text"], input[type="text"], input[type="email"], input[type="Request"], textarea[type="Request"] {
+input[type="text"], input[type="email"], input[type="Request"]{
             color: var(--bg-color);
 }
-input[type="text"], input[type="text"], input[type="email"], input[type="Request"], textarea[type="Request"] {
+input[type="text"], input[type="email"], input[type="Request"]{
     border: 1px solid var(--main-color);
             padding: 10px;
             font-size: 16px;
             border-radius: 5px;
             outline: none;
+}
+textarea{
+    color: #2D2D2D;
 }
 ::placeholder {
     color: var(--bg-color);
